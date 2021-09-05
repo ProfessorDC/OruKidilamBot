@@ -17,8 +17,8 @@ You can't add me in any other group..
 <b><i><u>How To Use Me!?</u></i></b>
 
 <i>
--> Add Me To Any Group And Make Me Admin
--> Add Me To Your Desired Channel
+-> Well... You Can't Use Me
+-> My Destiny Is Always My Admins Decision
 </i>
 
 <b>Bot Commands (Works Only In Groups) :</b>

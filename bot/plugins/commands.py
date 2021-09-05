@@ -28,14 +28,14 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = f"{file_name}  🌟༺ ──•◈•─ ─•◈•──༻🌟➧ Want new movies ? The join the group \n 🔊 @ExploreMoviez \n 🔊 @ExploreTheMoviez \n @TheMoviesWorldWide",
+                caption = f"{file_name} \n 🌟༺ ──•◈•─ ─•◈•──༻🌟➧ Want new movies ? Then join the group \n 🔊 @ExploreMoviez \n 🔊 @ExploreTheMoviez \n 🔊 @TheMoviesWorldWide",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton
                                 (
-                                    '🎖 Join Discussion 🎖', url="https://t.me/ProfessorDC63"
+                                    '🎖 Join Discussion 🎖', url="https://t.me/joinchat/dgZkpT6MhX9mMzY1"
                                 )
                         ]
                     ]
@@ -49,7 +49,7 @@ async def start(bot, update):
     buttons = [[
         InlineKeyboardButton('Developer', url='https://t.me/ProfessorDC63'),
         
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/ProfessorDC/OruKidilamBot')
     ],[
         InlineKeyboardButton('Support 🛠', url='https://t.me/ProfessorDC63')
     ],[

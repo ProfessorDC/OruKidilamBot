@@ -9,7 +9,7 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-@Client.on_message(filters.command(["start"]) & filters.private, group=1)
+@Client.on_message(filters.command(["start"]) & filters.private, chat_id=1)
 async def start(bot, update):
     
     try:
@@ -28,7 +28,7 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = f"{file_name} \n 🌟༺ ──•◈•─ ─•◈•──༻🌟➧ Want new movies ? Then join the group \n 🔊 @ExploreMoviez \n 🔊 @ExploreTheMoviez \n 🔊 @TheMoviesWorldWide",
+                caption = f"{file_name} \n 🌟༺ ──•◈•─ ─•◈•──༻🌟\n➧ Want new movies ? Then join the group \n 🔊 @ExploreMoviez \n 🔊 @ExploreTheMoviez \n 🔊 @TheMoviesWorldWide",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [

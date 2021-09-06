@@ -83,7 +83,7 @@ async def auto_filter(bot, update):
             # add emoji down below inside " " if you want..
           #  button_text = f"{file_size} 📁 {file_name}"
        
-             button_text = f"{file_name} <br> 📁 {file_size:same}"
+             button_text = f"{file_name} 📁 {file_size:same}"
              
             
 

@@ -48,8 +48,7 @@ async def auto_filter(bot, update):
     allow_video = configs["types"]["video"]
     allow_audio = configs["types"]["audio"] 
     allow_document = configs["types"]["document"]
-    allow_image = configs["types"]["image"]
-    
+       
     max_pages = configs["configs"]["max_pages"] # maximum page result of a query
     pm_file_chat = configs["configs"]["pm_fchat"] # should file to be send from bot pm to user
     max_results = configs["configs"]["max_results"] # maximum total result of a query
@@ -66,7 +65,7 @@ async def auto_filter(bot, update):
             file_type = filter.get("file_type")
             file_link = filter.get("file_link")
             file_size = int(filter.get("file_size", "0"))
-            file_image = filter.get("file_image")
+            
             
             # from B to MiB
             
@@ -105,12 +104,7 @@ async def auto_filter(bot, update):
                     pass
                 else:
                     continue
-                    
-            elif file_type == "image":
-                if allow_image:
-                    continue
-                else:
-                    pass
+            
             
             if len(results) >= max_results:
                 break
@@ -222,7 +216,6 @@ async def auto_filter(bot, update):
         try:
             await bot.send_message(
                 chat_id = update.chat.id,
-                image=file_image,
                 text=f".:⭐ Check Links At @TheMoviesWorldWide ⭐:. \n Found {(len_results)} Results For Your Search: <code>{query}</code>",
                 reply_markup=reply_markup,
                 parse_mode="html",

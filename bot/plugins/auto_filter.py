@@ -81,7 +81,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_name} - 📂{file_size}"
+           # button_text = f"{file_name} - 📂{file_size}"
             
             
             
@@ -103,6 +103,12 @@ async def auto_filter(bot, update):
                     pass
                 else:
                     continue
+                    
+            elif file_type == "image":
+                if allow_image:
+                    continue
+                else:
+                    pass
             
             if len(results) >= max_results:
                 break
@@ -123,21 +129,21 @@ async def auto_filter(bot, update):
             
             results.append(
                 [
-                    InlineKeyboardButton(button_text, url=file_link)
-                   # InlineKeyboardButton(button_text, url=file_link),
-                   # InlineKeyboardButton(f"{file_size}", url=file_link)
+                   # InlineKeyboardButton(button_text, url=file_link)
+                    InlineKeyboardButton(f"{file_name}", url=file_link),
+                    InlineKeyboardButton(f"{file_size}", url=file_link)
            
                 ]
             )
         
     else:
         
-      channel_link = f"https://t.me/joinchat/lLZALBaWGhkyMTll"  
+      # channel_link = f"https://t.me/joinchat/lLZALBaWGhkyMTll"  
     
-      InlineKeyboardButton("Join Here ⏩", url=channel_link)
+     # InlineKeyboardButton("Join Here ⏩", url=channel_link)
 
         
-      #  return # return if no files found for that query
+        return # return if no files found for that query
     
 
     if len(results) == 0: # double check
@@ -214,6 +220,7 @@ async def auto_filter(bot, update):
         try:
             await bot.send_message(
                 chat_id = update.chat.id,
+                image=file_type,
                 text=f".:⭐ Check Links At @TheMoviesWorldWide ⭐:. \n Found {(len_results)} Results For Your Search: <code>{query}</code>",
                 reply_markup=reply_markup,
                 parse_mode="html",

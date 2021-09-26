@@ -28,7 +28,7 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = f"{file_name} \n 🌟༺ ──•◈•─ ─•◈•──༻🌟\n➧ Want new movies ? Then join the group \n 🔊 @ExploreMoviez \n 🔊 @ExploreTheMoviez \n 🔊 @TheMoviesWorldWide",
+                caption = f"{file_name} \n \n \n✪༺ ──•◈•─ •─ ─• ─•◈•──༻✪ \nᴄʜᴀɴɴᴇʟ ➧ @worldmoviesnew \nᴄʜᴀɴɴᴇʟ ➧ @TheMarvelStudioz \nᴄʜᴀɴɴᴇʟ ➧ @ExploreMoviez \nᴄʜᴀɴɴᴇʟ ➧ @ExploreTheMoviez \nᴄʜᴀɴɴᴇʟ ➧ @TheMoviesWorldWide \nᴄʜᴀɴɴᴇʟ ➧ @MarvelsWhatifNew \nᴄʜᴀɴɴᴇʟ ➧ @MoneyHeist(https://t.me/MoneyHeistAllTheSeasons) ᴄʜᴀɴɴᴇʟ ➧ @explorethemovies \nᴊᴏɪɴ ɢʀᴏᴜᴘ ➧ @World_Of_Movies_Group\n \n \n🎗ʝσιи 🎗 ѕнαяє🎗 ѕυρρσят🎗",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
